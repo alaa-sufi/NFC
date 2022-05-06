@@ -25,8 +25,10 @@ window.onload = function() {
    window.onscroll = function() {
      if(window.scrollY > 50){
        document.querySelector("nav").classList.add("less")
+       document.querySelector("nav").style.zIndex = "10002";
       }else{
        document.querySelector("nav").classList.remove("less")
+       document.querySelector("nav").style.zIndex = "9999"
 
      }
    }
