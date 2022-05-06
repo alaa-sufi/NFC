@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <meta name="keywords" content="Funckles,Funckles collection,funckles Nft,NFT,Fun NFT,Funny NFT,Funky Nft,New Nfts,Mint NFt,Asaad,Sousi,Photography, NFT">
-    <meta name="description" content="A team made from ( Graphic designer, business man, Art director and a Model )    We gathered to create a new style of NFTs to let people collect the NFT that express    their selfs, we palnned this so hard to make it POP!">
+    <meta name="keywords"
+        content="Funckles,Funckles collection,funckles Nft,NFT,Fun NFT,Funny NFT,Funky Nft,New Nfts,Mint NFt,Asaad,Sousi,Photography, NFT">
+    <meta name="description"
+        content="A team made from ( Graphic designer, business man, Art director and a Model )    We gathered to create a new style of NFTs to let people collect the NFT that express    their selfs, we palnned this so hard to make it POP!">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -166,7 +168,7 @@
                         </g>
                     </g>
                 </svg>
-               
+
                 <p class="mt-1">
                     Collect The only versions ever and express <br /> your personality
                 </p>
@@ -328,8 +330,8 @@
                     data-src="./images/02.png" style="--angle : 45deg; " /></>
             <li class="img-move three" style=" --align:end"><img src="./images/placeholder.svg" alt="So Funny..."
                     data-src="./images/03.png" style="--angle : 45deg;" /></li>
-            <li class="img-move four" style=" --align:center"><img src="./images/placeholder.svg" alt="I can smell it too"
-                    data-src="./images/04.png" style="--angle : 45deg;" /></li>
+            <li class="img-move four" style=" --align:center"><img src="./images/placeholder.svg"
+                    alt="I can smell it too" data-src="./images/04.png" style="--angle : 45deg;" /></li>
             <li class="img-move five" style=" --align:start"><img src="./images/placeholder.svg" alt="Heheheheh"
                     data-src="./images/05.png" style="--angle : 45deg;" /></li>
 
@@ -337,7 +339,42 @@
     </section>
     <!-- end collect    -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script>
+        window.onload = function () {
+            document.querySelector(".loader-parent").classList.add("d-none");
+            document.querySelectorAll("[data-src]").forEach((img) => {
+                img.src = img.dataset.src;
+            })
+        }
+
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+        function openNav() {
+            document.querySelector("nav ul").classList.toggle("active")
+        }
+        function closeToggle() {
+            document.querySelector("nav ul").classList.remove("active")
+        }
+        window.onscroll = function () {
+            if (window.scrollY > 50) {
+                document.querySelector("nav").classList.add("less")
+                document.querySelector("nav").style.zIndex = "10002";
+            } else {
+                document.querySelector("nav").classList.remove("less")
+                document.querySelector("nav").style.zIndex = "9999"
+
+            }
+        }
+    </script>
 </body>
 
 </html>
