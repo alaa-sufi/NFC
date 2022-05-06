@@ -167,6 +167,9 @@ body {
     &.five {
 
       margin-top: 3rem;
+      @include xs{
+        margin-top: 0;
+      }
     
     img {
      
@@ -189,6 +192,8 @@ body {
       @include xs{
         width: 75px;
         height: 120px;
+      border-radius: 0.5rem;  
+
 
 }
       transform: rotate3d(1, 0, 0, var(--angle));
@@ -393,6 +398,9 @@ nav {
     font-family: "Arboria-Book", "Helvetica Neue", Helvetica, Arial;
     color: $grey;
     line-height: 1;
+    @include xs{
+      margin-top: 15rem !important;
+    }
   }
   .header {
     padding-top: 12rem;
@@ -418,6 +426,10 @@ nav {
   .who {
     padding-top: 10rem;
     padding: 5rem 0;
+    @include xs{
+      padding-top: 0;
+      margin-top: -8rem;
+    }
   }
 }
 // end header   &  who we are
@@ -490,6 +502,9 @@ nav {
     }
   }
   .team {
+    @include xs{
+      padding: 0  1rem;
+    }
     figure {
       position: relative;
       transition: transform 0.3s;
@@ -587,10 +602,18 @@ nav {
   text-align: center;
   position: relative;
   justify-content: space-around;
+  @include xs{
+    overflow-y: hidden;
+  }
   button {
     padding: 1rem 1rem;
     font-size: 2rem;
     width: max-content;
+  }
+  @include xs{
+    .imgs-move {
+      margin-top: -4rem;
+    }
   }
 }
 
