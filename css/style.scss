@@ -398,9 +398,8 @@ nav {
     font-family: "Arboria-Book", "Helvetica Neue", Helvetica, Arial;
     color: $grey;
     line-height: 1;
-    @include xs{
-      margin-top: 15rem !important;
-    }
+    
+   
   }
   .header {
     padding-top: 12rem;
@@ -420,6 +419,11 @@ nav {
       font-size: 8rem;
       @include xs {
         font-size: 20vw;
+      }
+    }
+    p{
+      @include xs{
+        margin-top: 15rem !important;
       }
     }
   }
