@@ -222,7 +222,7 @@ body {
 button {
   all: unset;
   @include button-gradient();
-  z-index: 100003;
+  z-index: 999;
   position: relative;
   border-radius: 0.5rem;
   font-family: "Arboria-Book", "Helvetica Neue", Helvetica, Arial;
