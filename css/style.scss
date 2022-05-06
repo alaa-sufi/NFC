@@ -111,6 +111,7 @@ body {
   gap: 1rem;
   display: flex;
   justify-content: space-evenly;
+  pointer-events: none;
   @include xs{
     height: 75rem;
     width: 100%;
@@ -118,6 +119,7 @@ body {
   li {
     align-self: var(--align);
     z-index: 9999;
+  pointer-events: none;
     // position: absolute;perspective: 421px;-webkit-perspective: 421px;
     &.one img {
      
@@ -613,6 +615,10 @@ nav {
     padding: 1rem 1rem;
     font-size: 2rem;
     width: max-content;
+    @include xs{
+      font-size: 1.6rem;
+
+    }
   }
   @include xs{
     .imgs-move {
