@@ -44,21 +44,9 @@ $Loader-timing: ease-in-out;
 }
 @mixin button-gradient {
   background: rgb(147, 22, 93);
-  background: -moz-linear-gradient(
-    329deg,
-    rgba(147, 22, 93, 1) 54%,
-    rgba(21, 21, 182, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    329deg,
-    rgba(147, 22, 93, 1) 54%,
-    rgba(21, 21, 182, 1) 100%
-  );
-  background: linear-gradient(
-    329deg,
-    rgba(147, 22, 93, 1) 54%,
-    rgba(21, 21, 182, 1) 100%
-  );
+  background: -moz-linear-gradient(138deg, #3E1CE9 -9%, #D90185 100%);
+  background: -webkit-linear-gradient(138deg, #3E1CE9 -9%, #D90185 100%);
+  background: linear-gradient(138deg, #3E1CE9 -9%, #D90185 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#93165d",endColorstr="#1515b6",GradientType=1);
 }
 @mixin button-gradient-hover {
